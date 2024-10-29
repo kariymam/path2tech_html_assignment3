@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Preference</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Breakfast</h1>
+    <form method="post" name="update_breakfast" aria-labelledby="description">
+      <h2 id="description">Update your daily in-suite breakfast preferences</h2>
+      <fieldset>
+        <legend>My room</legend>
+        <ul>
+          <li>
+            <label>
+              Room Number
+              <input
+                type="text"
+                id="room"
+                name="guest_room"
+                value="323"
+                readonly
+              />
+            </label>
+          </li>
+          <li>
+            <label>
+              Number of guests
+              <input
+                type="number"
+                name="guest_room"
+                min="1"
+                max="4"
+                id="guests"
+                value="1"
+                disabled
+              />
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Best time to deliver my breakfast</legend>
+        <ol>
+          <li>
+            <label for="early_breakfast">
+              <input
+                type="radio"
+                id="early_breakfast"
+                name="time_preference"
+                value="Early morning"
+                required
+              />
+              Early morning (5:00AM to 7:30AM)
+            </label>
+          </li>
+          <li>
+            <label for="mid_breakfast">
+              <input
+                type="radio"
+                id="mid_breakfast"
+                name="time_preference"
+                value="Mid-morning"
+              />
+              Mid-morning (8:00AM to 10:30AM)
+            </label>
+          </li>
+          <li>
+            <label for="late_breakfast">
+              <input
+                type="radio"
+                id="late_breakfast"
+                name="time_preference"
+                value="Late"
+              />
+              Late (10:30AM to 12PM)
+            </label>
+          </li>
+        </ol>
+      </fieldset>
+      <br />
+      <div id="dietary_restrictions">
+        <h3>Dietary restrictions</h3>
+        <input
+          type="radio"
+          id="dietary_no"
+          name="dietary_restrictions"
+          value="No"
+        />
+        <label for="dietary_no"> No </label>
+        <input
+          type="radio"
+          id="dietary_yes"
+          name="dietary_restrictions"
+          value="No"
+          checked
+          required
+        />
+        <label for="dietary_yes"> Yes</label>
+        <fieldset id="dietary_options">
+          <legend>Dietary restrictions</legend>
+          <ul>
+            <li>
+              <label>
+                <input
+                  type="checkbox"
+                  id="vegan"
+                  name="dietary_option"
+                  value="vegan"
+                />
+                Vegan
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="checkbox"
+                  id="vegetarian"
+                  name="dietary_option"
+                  value="vegetarian"
+                />
+                Vegetarian
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="checkbox"
+                  id="gluten"
+                  name="dietary_option"
+                  value="gluten-free"
+                />
+                Gluten-free
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="checkbox"
+                  id="eggs"
+                  name="dietary_option"
+                  value="no eggs"
+                />
+                No eggs
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="checkbox"
+                  id="shellfish"
+                  name="dietary_option"
+                  value="no shellfish"
+                />
+                No shellfish
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="checkbox"
+                  id="pork"
+                  name="dietary_option"
+                  value="no pork"
+                />
+                No pork
+              </label>
+            </li>
+            <li>
+              <label for="other">
+                <input
+                  type="checkbox"
+                  id="other"
+                  name="dietary_option"
+                  value="other"
+                />
+                Other
+              </label>
+              <label for="diet">
+                Diet
+                <input type="text" id="diet" name="diet" />
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <br />
+      <div id="food_allergies">
+        <h3>Food allergies</h3>
+        <input
+          type="radio"
+          id="allergies_no"
+          name="food_allergies"
+          value="No"
+        />
+        <label for="allergies_no">No</label>
+        <input
+          type="radio"
+          id="allergies_yes"
+          name="food_allergies"
+          value="No"
+          checked
+          required
+        />
+        <label for="allergies_yes">Yes</label>
+        <fieldset id="known_food_allergies">
+          <legend>Known food allergies</legend>
+          <textarea id="food_allergies"></textarea>
+        </fieldset>
+      </div>
+      <br />
+      <fieldset>
+        <label for="beverage">Preferred beverage</label>
+        <select id="beverage">
+          <optgroup label="Decaffeinated">
+            <option value="Water" selected>Water</option>
+            <option disabled value="Juice">Juice</option>
+            <option value="OJ">Orange juice</option>
+            <option value="AppleJuice">Apple juice</option>
+            <option value="AppleJuice">Guava juice</option>
+          </optgroup>
+          <optgroup label="Caffeinated">
+            <option disabled value="Coffee">Coffee</option>
+            <option value="Drip">Drip</option>
+            <option value="Americano">Americano</option>
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Latte">Latte</option>
+            <!---->
+            <option disabled value="Tea">Tea</option>
+            <option value="MatchaLatte">Matcha Latte</option>
+            <option value="LondonFog">London Fog</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
