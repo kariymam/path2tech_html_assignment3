@@ -7,8 +7,8 @@ ul {
   width: 100%;
 }
 
-input[name~="dietary_option"],
-input[type="radio"] {
+input[name~=dietary_option],
+input[type=radio] {
   -webkit-transform: scale(1.5);
   -moz-transform: scale(1.5);
   -o-transform: scale(1.5);
@@ -16,18 +16,20 @@ input[type="radio"] {
   transform: scale(1.5);
 }
 
-input[id="dietary_yes"]:checked ~ #dietary_options {
+input[id=dietary_yes]:checked ~ #dietary_options {
   display: block;
 }
 
-input[id="dietary_no"]:checked ~ #dietary_options {
+input[id=dietary_no]:checked ~ #dietary_options {
   display: none;
 }
 
-input[id="allergies_yes"]:checked ~ #known_food_allergies {
+input[id=allergies_yes]:checked ~ #known_food_allergies {
   display: block;
 }
 
-input[id="allergies_no"]:checked ~ #known_food_allergies {
+input[id=allergies_no]:checked ~ #known_food_allergies {
   display: none;
 }
+
+/*# sourceMappingURL=styles.css.map */
