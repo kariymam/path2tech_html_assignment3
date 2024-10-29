@@ -3,16 +3,16 @@ ul {
   list-style-type: none;
 }
 
+:-moz-read-write {
+  width: 100%;
+}
+
 :read-write {
   width: 100%;
 }
 
 input[name~=dietary_option],
 input[type=radio] {
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  -ms-transform: scale(1.5);
   transform: scale(1.5);
 }
 
@@ -30,6 +30,4 @@ input[id=allergies_yes]:checked ~ #known_food_allergies {
 
 input[id=allergies_no]:checked ~ #known_food_allergies {
   display: none;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
